@@ -4,7 +4,7 @@ pragma solidity ^0.8.10;
 import "forge-std/Test.sol";
 //import "./interface.sol";
 
-
+// 执行命令 forge test --match-path ./test/EXPTest2.sol -vvv
 contract EXP is Test{
 
     function setUp() public {
@@ -19,6 +19,7 @@ contract EXP is Test{
     vm.deal(add,1 ether);
     uint256 balance20=add.balance;
     emit log_named_decimal_uint("after  add balance ", balance20, 18);
+    console.log("111");
     }
 
 }
