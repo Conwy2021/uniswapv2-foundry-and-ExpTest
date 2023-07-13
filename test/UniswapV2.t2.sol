@@ -9,7 +9,7 @@ import "../src/UniswapV2Router02.sol";
 import "../src/libraries/Math.sol";
 import "../src/interfaces/IUniswapV2Pair.sol";
 import {CS2} from "../src/NfDAO.sol";
-
+//forge test --match-path ./test/UniswapV2.t4Ether.sol --match-test testLiquidityOwner  -vvv
 contract UniswapV2Test is Test {
     WETH9 public weth;
 
@@ -44,8 +44,9 @@ contract UniswapV2Test is Test {
         cs.approve(address(router), 100 ether);
         
         cs.setTranFee(1);
-      
-        inviters =[100,200,300];
+        //uint256[] public  inviters
+        
+       inviters =[100,200,300];
         cs.setInviterFee(inviters);
         // cs.setSellFee(1000,800,500);
         // cs.setBuyFee(1000,800,500);
