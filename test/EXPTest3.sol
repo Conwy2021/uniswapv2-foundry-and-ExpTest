@@ -42,13 +42,14 @@ contract EXP is Test{
 
     //weth_unshETH pair 0x29fc01f04032c76ca40f353c7df685f4444c15ed
    
-//     bytes memory data38 = abi.encodePacked(bytes4(0x0902f1ac));
+    bytes memory data38 = abi.encodePacked(bytes4(0x0902f1ac));
 //    // bytes memory name=new bytes(0x0902f1ac); EvmError: MemoryLimitOOG 这里会报错 Reason: EvmError: OutOfGas
-//     (bool success2, bytes memory data2)=address(0x29fC01f04032c76cA40f353c7dF685f4444c15eD).call(data38);
-//     console2.log("success",success2);
-//     console2.logBytes(data2);
-//   (returnAmount,) = abi.decode(returnData, (uint256, uint256)); // 解析返回值
-      console2.log("weth_USDC before");
+    (bool success2, bytes memory data2)=address(0x29fC01f04032c76cA40f353c7dF685f4444c15eD).call(data38);
+    console2.log("success",success2);
+    console2.logBytes(data2);
+    (uint112 returnAmount,,,) = abi.decode(data2, (uint112, uint112,uint16,uint16)); // 解析函数
+    emit log_named_decimal_uint("returnAmount", returnAmount, 18);
+    console2.log("weth_USDC before");
     (uint256 resa0,uint256 resa1, ,)= pairU_ETH.getReserves();
     emit log_named_decimal_uint("pairU_ETH ETH res0", resa0, 18);//ETH
     emit log_named_decimal_uint("pairU_ETH USDC res1", resa1, 6);//USDC
