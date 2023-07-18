@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.17;
 
-import {MerkleVerifier2} from "expand/MerkleVerifier.sol";
+import {MerkleVerifier2} from "src/expand/MerkleVerifier.sol";
 contract A {
   function At() public  {
     bytes32 aHash = bytes32("aaaa");
