@@ -19,8 +19,8 @@ library UniswapV2Library {
         pair = address(uint160(uint256(keccak256(abi.encodePacked(
                 hex'ff',
                 factory,
-                keccak256(abi.encodePacked(token0, token1)),//0x95a13f87cbade6dc7f397001d9c6119ea8b9a005e5c32270caa979d1af22aceb
-                hex'95a13f87cbade6dc7f397001d9c6119ea8b9a005e5c32270caa979d1af22aceb' // init code hash
+                keccak256(abi.encodePacked(token0, token1)),//0x408e20e24ca4ccc3ade8c2f0f389d16d0b7f258cbbce0f6359a92335ae2ac6c0
+                hex'408e20e24ca4ccc3ade8c2f0f389d16d0b7f258cbbce0f6359a92335ae2ac6c0' // init code hash
             )))));
     }
 

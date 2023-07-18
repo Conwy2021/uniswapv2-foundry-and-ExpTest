@@ -60,9 +60,9 @@ contract UniswapV2Test is Test {
          
     }
 
-    // function testLog() public {
-    //     emit log_named_bytes32("factory code hash", factory.INIT_CODE_PAIR_HASH());//先更新下lib 库里的pair hash
-    // }
+    function testLog() public {
+        emit log_named_bytes32("factory code hash", factory.INIT_CODE_PAIR_HASH());//先更新下lib 库里的pair hash
+    }
 
     function testTransfer() external {
         console2.log("start");
