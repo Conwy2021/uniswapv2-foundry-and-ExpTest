@@ -16,3 +16,5 @@ forge install --no-commit OpenZeppelin/openzeppelin-contracts<br>
 function testLog() public {
         emit log_named_bytes32("factory code hash", factory.INIT_CODE_PAIR_HASH());//先更新下lib 库里的pair hash
     }
+<br>
+执行命令时 //forge test --match-path ./test/bunnTest.sol --match-test testExploit  -vvv    windows里要注意 path 这里的路径是 /    (\会报错找到不到文件)
